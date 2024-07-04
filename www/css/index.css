@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 14px;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    background-color: aliceblue;
+    color: #303030;
+    user-select: none;
+    overflow: hidden;
+}
+
+img {
+    display: block;
+    width: auto;
+    max-width: 100%;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 2.5rem;
+    padding: 1rem;
+}
+
+.container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    gap: 1.8rem;
+    place-items: center;
+}
+
+
+.menu {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+header img {
+    margin: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+header {
+    background: white;
+    width: 100%;
+    box-shadow: 1rem 1rem 3rem lightgrey;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    height: 5rem;
+}
+
+
+/*ASIDE*/
+aside {
+    position: fixed;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.95);
+    width: 18rem;
+    z-index: 3;
+    box-shadow: 1rem 3rem 4rem lightgrey;
+    height: 100%;
+    padding-right: 2rem;
+    overflow-y: auto;
+}
+
+aside .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1.4rem;
+}
+
+aside img {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+aside .sidebar {
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+aside .sidebar a {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    width: calc(100% - 2rem);
+    height: 5rem;
+    transition: all 300ms ease;
+    color: grey;
+    font-size: 1.7rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    position: relative;
+}
+
+aside .sidebar a.active {
+    color: #303030;
+    width: calc(100% + 2rem);
+    background-color: aliceblue;
+}
+
+aside .close {
+    display: inline-block;
+}
+
+main {
+    padding: 1rem;
+    overflow-y: auto;
+    height: calc(100vh - 5rem);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+/*TABLE*/
+.table, th, td {
+    padding: 1rem;
+    border-collapse: collapse;
+}
+
+
+
+.main-table {
+    margin-top: 5rem;
+    width: 90%;
+    height: 80%;
+    background-color: white;
+    box-shadow: 0 0.4rem 0.8rem lightgray;
+    border-radius: 0.8rem;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+.tableheader {
+    width: 100%;
+    height: 10%;
+    background-color: #fff1;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.wholetable {
+    overflow: auto;
+    width: 95%;
+    max-width: 100%;
+    background-color: #fffb;
+    margin: 0.8rem auto 1rem;
+    border-radius: 0.6rem;
+    height: 80vh;
+    max-height: 100%;
+}
+
+.wholetable::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+}
+
+.wholetable::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    background-color: lightgray;
+    visibility: hidden;
+}
+
+.wholetable:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    position:sticky;
+    top: 0;
+    left: 0;
+    background-color: rgb(212, 212, 212);
+    line-height: 20px;
+    font-size: 1.5rem;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #0000000b;
+}
+
+table img {
+    width: 3rem;
+    height: 3rem;
+}
+
+tbody tr {
+    line-height: 20px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.hidden {
+    display: none;
+}
+
+/* button */
+#addbtn {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 1rem;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1rem;
+  margin: 0;
+  outline: none;
+  padding: 1rem 2rem;
+  position: relative;
+  touch-action: manipulation;
+  transition: box-shadow .2s,-ms-transform .1s,-webkit-transform .1s,transform .1s;
+  user-select: none;
+  width: auto;
+}
+
+#addbtn:focus-visible {
+  box-shadow: #222 0 0 0 2px, rgba(255, 255, 255, 0.8) 0 0 0 1rem;
+  transition: box-shadow .2s;
+}
+
+#addbtn:active {
+  background-color: white;
+  border-color: black;
+  transform: scale(.96);
+}
+#addbtn img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+/*FORM*/
+.formpopup {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #f1f1f1;
+    border-radius: 1rem;
+    z-index: 9;
+    background-color: white;
+    padding: 15px;
+    max-width: 300px;
+    max-height: calc(100% - 40px);
+    overflow: auto;
+    box-shadow: 0 0.4rem 0.8rem lightgray;
+  }
+  
+  .formcontainer input[type=text] {
+    width: calc(100% - 30px);
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    color: #222;
+  }
+
+  .formcontainer input[type=text]:focus {
+    background-color: white;
+    border: 1px solid #222;
+    border-radius: 1rem;
+    box-sizing: border-box;
+    color: #222;
+  }
+  
+  .formcontainer .btn {
+    background-color: #222;
+    border: 1px solid #FFF;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: #FFF;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    padding: 13px 23px;
+    position: relative;
+    touch-action: manipulation;
+    width: auto;
+    opacity: 0.8;
+    margin-bottom: 10px;
+  }
+  
+  .formcontainer .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+  /*MAIN PAGE*/
+  #welcome {
+    margin-bottom: 20px;
+    font-size: 3.5rem;
+    color: #333;
+    font-weight: 800;
+  }
+
+  .otherpage .otherpagebutton {
+    background-color: #222;
+    border: 1px solid white;
+    border-radius: 10px;
+    box-sizing: border-box;
+    color: #FFF;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    position: relative;
+    touch-action: manipulation;
+    width: 10rem;
+    height: 5rem;
+    opacity: 0.8;
+    margin: 10px;
+    font-size: 1.7rem;
+    box-shadow: 1rem 1.5rem 4rem rgb(183, 181, 181);
+  }
+
+  .otherpage .otherpagebutton:hover {
+    opacity: 1;
+  }
+
+  #welcomeL {
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #333;
+    font-weight: 450;
+  }
+
+  .fadein {
+    opacity: 0;
+    animation: fadeInAnimation 2s forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <meta name="color-scheme" content="light dark">
+    <link rel="stylesheet" href="css/index.css">
+    <title>Számlák</title>
+</head>
+<body>
+    <header>
+        <div class="menu" id="menubutton">
+            <img src="img/menu.png" alt="menu">
+        </div>
+    </header>
+    <div class="container">
+        <aside>
+            <div class="top">
+                <div class="close" id="closebutton">
+                    <img src="img/close.png" alt="close">
+                </div>
+            </div>
+            <div class="sidebar">
+                <a href="index.html">
+                    <h3>Főoldal</h3>
+                </a>
+                <a href="adatok.html" class="active">
+                    <h2>Számlák</h2>
+                </a>
+            </div>
+        </aside>
+        <main class="main-table">
+            <section class="tableheader">
+                <h1>Számlák</h1>
+                <button type="button" id="addbtn" onclick="openf()"><img src="img/add.png" alt="add"></button>
+            </section>
+            <section class="wholetable">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Azonosító</th>
+                            <th>Név</th>
+                            <th>Áfakulcs</th>
+                            <th>Státusz</th>
+                            <th>Létrehozó azonosítója</th>
+                            <th>Létrehozva</th>
+                            <th>Módosító azonosító</th>
+                            <th>Módosítva</th>
+                            <th>Törlés</th>
+                            <th>Módosítás</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablebody">
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <div class="formpopup" id="form1">
+        <form class="formcontainer" id="formm">
+          <h1 id="formTitle">Hozzáadás</h1>
+
+          <label for="nev"><b>Név</b></label>
+          <input type="text" placeholder="Név" name="nev" id="nev" required>
+    
+          <label for="afakulcs"><b>Áfakulcs</b></label>
+          <input type="text" placeholder="Áfakulcs" name="afakulcs" id="afakulcs" required>
+          
+          <button type="submit" class="btn" id="submitBtn">Hozzáadás</button>
+          <button type="button" class="btn cancel" onclick="closeF()">Mégse</button>
+        </form>
+    </div>
+
+    <div class="formpopup" id="form2">
+        <form class="formcontainer" id="formm2">
+          <h1 id="formTitle2">Módosítás</h1>
+      
+          <input type="hidden" id="recordId2">
+      
+          <label for="nev2"><b>Név</b></label>
+          <input type="text" placeholder="Név" name="nev" id="nev2" required>
+      
+          <label for="afakulcs2"><b>Áfakulcs</b></label>
+          <input type="text" placeholder="Áfakulcs" name="afakulcs" id="afakulcs2" required>
+          
+          <button type="submit" class="btn" id="updateBtn">Módosítás</button>
+          <button type="button" class="btn cancel" onclick="closeF2()">Mégse</button>
+        </form>
+    </div>
+    
+    <script src="js/adatok.js"></script>
+</body>
+</html>
